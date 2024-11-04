@@ -8,6 +8,7 @@ use Symbiote\SteamedClams\Model\ClamAVScan;
 use SilverStripe\Assets\File;
 use SilverStripe\ORM\ValidationException;
 use SilverStripe\Assets\Dev\TestAssetStore;
+use SilverStripe\Assets\Flysystem\ProtectedAssetAdapter;
 use SilverStripe\Security\BasicAuth;
 use SilverStripe\Core\Config\Config;
 
@@ -15,7 +16,7 @@ class ClamAVExtensionTest extends SapphireTest
 {
     protected $usesDatabase = true;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
